@@ -22,20 +22,20 @@
             <h2 class="card__title">Completa tu registro</h2>
             <form action="./registro_concluido.html" class="formulario flex flex--column">
                 
-                }<fieldset>
+                <fieldset>
                     <legend class="form__label">Información básica</legend>
-                    <div class="input-container">
-                        <input name="name" id="name" class="input" type="text" placeholder="Nombre" required>
+                    <div class="input-container ">
+                        <input name="name" id="name" class="input" type="text" placeholder="Nombre" required data-tipo="name">
                         <label class="input-label" for="name">Nombre</label>
-                        <span class="input-message-error">Este campo no es valido</span>
+                        <span class="input-message-error" >Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="email" placeholder="Email" required>
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
                         <label class="input-label" for="email">Email</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$" title="Mín 6 max12 caracteres, al menos 1 letra mayúscula, 1 letra minúscula y 1 número:"  >
+                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$" title="Mín 6 max 12 caract.,1 letra mayúscula, 1 letra minúscula y 1 número" data-tipo="password" >
                         <label class="input-label" for="password">Contraseña</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -44,7 +44,7 @@
                 <fieldset>
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
-                        <input name="birth" id="birth" class="input" type="text" placeholder="Fecha de nacimento">
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" required data-tipo="nacimiento">
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -74,9 +74,10 @@
                     </div>
                 </fieldset>
                 
-                <button class="button">Registrar</a>
+                <button class="button">Registrar</a>    
             </form>
         </section>
     </main>
+    <script src="/js/app.js" type="module"  ></script>
 </body>
 </html>
