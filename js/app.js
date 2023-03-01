@@ -7,3 +7,4 @@ inputs.forEach((input) => {
     validar(input.target);
   });
 });
+

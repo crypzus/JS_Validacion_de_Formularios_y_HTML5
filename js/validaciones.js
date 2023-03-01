@@ -14,10 +14,11 @@ export function validar(input) {
 }
 const tiposDeErrores = [
     "valueMissing",
-    "tipeMismatch",
-    "patterMismarch",
-    "custtomError"
-]
+    "typeMismatch",
+    "patternMismatch",
+    "customError"
+];
+
 const mensajeDeError = {
     name: {
         valueMissing : "esto no puede estar vacio"
@@ -32,7 +33,7 @@ const mensajeDeError = {
     },
     nacimiento: {
         valueMissing : "falta agregar la fecha vacio",
-        custtomError : "debes tener al menos 18 años de edad"
+        customError : "debes tener al menos 18 años de edad"
     },
     numero:{
         valueMissing : "el campo esta  vacio",
@@ -50,7 +51,7 @@ const mensajeDeError = {
         valueMissing : "campo esta vacio ",
         patternMismatch : "el estado  debe contener min entre 4 a 15 catracteres"
     },
-}
+};
  
 function mostrarMensajeDeError (tipoDeInput, input){
     let mensaje = "";
@@ -59,7 +60,7 @@ function mostrarMensajeDeError (tipoDeInput, input){
             console.log(tipoDeInput,error); 
             console.log(input.validity[error]);
             console.log(mensajeDeError[tipoDeInput][error]);
-             mensaje = mensajeDeError[tipoDeInput][error];
+            mensaje = mensajeDeError[tipoDeInput][error];
         }
         
     });
